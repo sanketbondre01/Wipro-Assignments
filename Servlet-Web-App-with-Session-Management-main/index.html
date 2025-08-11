@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Form</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom, #475e9c, #e6d3a3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background: linear-gradient(to top, #f9f9f9, #dcdcdc);
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="password"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 18px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .gender-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 18px;
+            align-items: center;
+        }
+
+        .gender-group label {
+            margin: 0;
+        }
+
+        input[type="submit"] {
+            background-color: #475e9c;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            width: 100%;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #384a7c;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>User Details</h2>
+        <form action="user" method="post">
+            <label for="name">Name:</label>
+            <input type="text" name="name" required>
+
+            <label for="age">Age:</label>
+            <input type="number" name="age" required>
+
+            <label for="password">Password:</label>
+            <input type="password" name="password" required>
+
+            <label>Gender:</label>
+            <div class="gender-group">
+                <input type="radio" name="gender" value="Male" required>
+                <label>Male</label>
+                <input type="radio" name="gender" value="Female">
+                <label>Female</label>
+            </div>
+
+            <label for="address">Address:</label>
+            <textarea name="address" rows="3" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
