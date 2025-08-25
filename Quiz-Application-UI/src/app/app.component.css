@@ -1,0 +1,14 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.navbar-noauth mat-toolbar {
+  background-color: #00796b; /* keep green background */
+  color: white; /* make toolbar text/icons white */
+}
+
+.navbar-noauth mat-toolbar button,
+.navbar-noauth mat-toolbar span,
+.navbar-noauth mat-toolbar .mat-icon {
+  color: white !important; /* force Signup, Login, My App, and menu icon white */
+}
