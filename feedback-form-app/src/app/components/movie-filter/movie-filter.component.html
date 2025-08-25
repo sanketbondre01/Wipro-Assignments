@@ -1,0 +1,6 @@
+<mat-form-field appearance="fill">
+  <mat-label>Filter by Genre</mat-label>
+  <mat-select (selectionChange)="genreSelected.emit($event.value)">
+    <mat-option *ngFor="let genre of genres" [value]="genre">{{ genre }}</mat-option>
+  </mat-select>
+</mat-form-field>

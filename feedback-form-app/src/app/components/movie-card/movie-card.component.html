@@ -1,0 +1,14 @@
+<mat-card [ngClass]="{ 'top-rated': highlightTopRated }">
+  <img mat-card-image [src]="movie.posterUrl || 'https://via.placeholder.com/150'" alt="Movie Poster" />
+  <mat-card-content>
+    <h2>{{ movie.title }}</h2>
+    <p><strong>Genre:</strong> {{ movie.genre }}</p>
+    <p>
+      <strong>Rating:</strong>
+      <ng-container *ngFor="let i of [1,2,3,4,5]">
+        <mat-icon color="{{ i <= movie.rating ? 'accent' : '' }}">star</mat-icon>
+      </ng-container>
+    </p>
+    <p>{{ movie.description }}</p>
+  </mat-card-content>
+</mat-card>

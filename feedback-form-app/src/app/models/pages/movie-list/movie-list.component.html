@@ -1,0 +1,23 @@
+<!-- movie-list.component.html -->
+<div class="movie-app">
+  <h2>Movie List App</h2>
+  <p>Average Rating: {{ averageRating }}</p>
+
+  <div class="movie-container">
+    <mat-card *ngFor="let movie of movies" class="movie-card">
+      <img mat-card-image [src]="movie.poster" [alt]="movie.title">
+      <mat-card-title>{{ movie.title }}</mat-card-title>
+      <mat-card-subtitle>{{ movie.genre }}</mat-card-subtitle>
+      <mat-card-content>
+        <p>{{ movie.description }}</p>
+        <div class="stars">
+          <span *ngFor="let star of [1,2,3,4,5]">
+            <mat-icon>
+              {{ star <= movie.rating ? 'star' : 'star_border' }}
+            </mat-icon>
+          </span>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

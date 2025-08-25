@@ -1,0 +1,17 @@
+.movie-app {
+  padding: 20px;
+}
+
+.movie-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.movie-card {
+  width: 220px;
+  border-radius: 12px;
+}
+.stars {
+  color: gold;
+}
