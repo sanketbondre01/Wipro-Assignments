@@ -1,0 +1,30 @@
+mat-card {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.full-width {
+  flex: 1;
+}
+
+.task-text {
+  margin-left: 10px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.spacer {
+  flex: 1;
+}

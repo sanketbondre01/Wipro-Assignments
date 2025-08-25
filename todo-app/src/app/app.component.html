@@ -1,0 +1,24 @@
+<mat-card>
+  <mat-toolbar color="primary">To-Do App</mat-toolbar>
+
+  <div class="input-container">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Add a task</mat-label>
+      <input matInput [(ngModel)]="newTask" (keyup.enter)="addTask()" />
+    </mat-form-field>
+    <button mat-raised-button color="accent" (click)="addTask()">+ Add</button>
+  </div>
+
+  <mat-list>
+    <mat-list-item *ngFor="let task of tasks; let i = index">
+      <mat-checkbox [(ngModel)]="task.completed"></mat-checkbox>
+      <span [class.completed]="task.completed" class="task-text">
+        {{ task.name }}
+      </span>
+      <span class="spacer"></span>
+      <button mat-icon-button color="primary" (click)="editTask(i)">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button color="warn" (click)="deleteTask(i)">
+        <mat-icon>delete</mat-icon>
+      </button>

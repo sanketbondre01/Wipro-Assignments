@@ -1,0 +1,99 @@
+/* Full-page gradient background */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* To-Do card */
+mat-card {
+  width: 480px;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+/* Toolbar */
+mat-toolbar {
+  border-radius: 12px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+/* Input section */
+.input-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.full-width {
+  flex: 1;
+}
+
+mat-form-field {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+}
+
+button[mat-raised-button] {
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 25px;
+  padding: 8px 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button[mat-raised-button]:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(255, 118, 156, 0.5);
+}
+
+/* Task list */
+mat-list-item {
+  margin: 6px 0;
+  padding: 8px 10px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+mat-list-item:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Completed tasks */
+.completed {
+  text-decoration: line-through;
+  color: #ddd;
+  font-style: italic;
+}
+
+.task-text {
+  margin-left: 12px;
+  font-size: 16px;
+  flex: 1;
+}
+
+/* Action buttons */
+button[mat-icon-button] {
+  color: #fff;
+  transition: transform 0.2s ease;
+}
+
+button[mat-icon-button]:hover {
+  transform: scale(1.2);
+}
