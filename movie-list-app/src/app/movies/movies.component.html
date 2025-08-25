@@ -1,0 +1,24 @@
+<mat-toolbar color="primary">
+  <span>Movie List App</span>
+</mat-toolbar>
+
+<div class="movie-container">
+  <mat-card class="movie-card" *ngFor="let movie of movies">
+    <img mat-card-image [src]="movie.imageUrl" alt="{{ movie.title }}">
+
+    <mat-card-header>
+      <mat-card-title>{{ movie.title }}</mat-card-title>
+      <mat-card-subtitle>{{ movie.genre }}</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <p>{{ movie.description }}</p>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <div class="hearts">
+        <span *ngFor="let heart of getHearts(movie.rating)">{{ heart }}</span>
+      </div>
+    </mat-card-actions>
+  </mat-card>
+</div>
