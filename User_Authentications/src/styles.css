@@ -1,0 +1,52 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+}
+
+.auth-container {
+  display: flex;
+  height: 100vh;
+}
+
+.auth-left, .auth-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:white;
+}
+
+.auth-form {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: skyblue;
+  color: black;
+}
+
+.form-box {
+  width: 350px;
+  background: transparent;
+}
+
+.form-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-control {
+  border-radius: 25px;
+  margin-bottom: 15px;
+}
+
+.btn-custom {
+  width: 100%;
+  border-radius: 25px;
+  background-color: orangered;
+  color: white;
+}
+
+.btn-custom:hover {
+  background-color: darkred;
+}
